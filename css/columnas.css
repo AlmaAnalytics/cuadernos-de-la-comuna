@@ -1,0 +1,889 @@
+/* =====================================================
+   CUADERNOS DE LA COMUNA
+   PÁGINA DE COLUMNAS
+   ===================================================== */
+
+
+/* -----------------------------------------------------
+   CONFIGURACIÓN GENERAL
+   ----------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #f8f6f2;
+    color: #171717;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    min-height: 100vh;
+}
+
+
+/* -----------------------------------------------------
+   CONTENEDOR PRINCIPAL
+   ----------------------------------------------------- */
+
+.contenido {
+    width: 100%;
+    padding: 40px 30px 80px;
+}
+
+
+.columnas {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+
+/* -----------------------------------------------------
+   ENCABEZADO
+   ----------------------------------------------------- */
+
+.encabezado-seccion {
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #cfcac2;
+
+    margin-bottom: 40px;
+}
+
+
+.marca-seccion {
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #a51d24;
+
+    margin-bottom: 8px;
+
+    text-transform: uppercase;
+}
+
+
+.encabezado-seccion h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(48px, 6vw, 72px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    color: #171717;
+}
+
+
+/* -----------------------------------------------------
+   COLUMNA DESTACADA
+   ----------------------------------------------------- */
+
+.columna-destacada {
+    display: block;
+
+    width: 100%;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    margin-bottom: 35px;
+}
+
+
+/*
+   IMPORTANTE:
+
+   Quitamos completamente el estilo azul/morado
+   que el navegador pone automáticamente a los enlaces.
+*/
+
+.columna-destacada:visited {
+    color: inherit;
+}
+
+
+.columna-destacada:hover {
+    color: inherit;
+}
+
+
+/* -----------------------------------------------------
+   IMAGEN PRINCIPAL
+   ----------------------------------------------------- */
+
+.columna-imagen {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #ddd;
+
+    aspect-ratio: 16 / 8.5;
+}
+
+
+.columna-imagen img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+
+/* Pequeño movimiento al pasar el mouse */
+
+.columna-destacada:hover .columna-imagen img {
+    transform: scale(1.025);
+}
+
+
+/* -----------------------------------------------------
+   RECUADRO SEMITRANSPARENTE
+   ----------------------------------------------------- */
+
+.columna-overlay {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 7%;
+
+    transform: translateX(-50%);
+
+    width: min(720px, 82%);
+
+    padding: 30px 45px;
+
+    /*
+       Blanco semitransparente.
+       Permite seguir viendo la imagen.
+    */
+
+    background: rgba(248, 246, 242, 0.66);
+
+    backdrop-filter: blur(3px);
+
+    text-align: center;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Movimiento suave del recuadro */
+
+.columna-destacada:hover .columna-overlay {
+
+    background: rgba(248, 246, 242, 0.92);
+
+    transform: translate(-50%, -5px);
+}
+
+
+/* -----------------------------------------------------
+   TÍTULO DE LA COLUMNA
+   ----------------------------------------------------- */
+
+.columna-overlay h2 {
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(38px, 4vw, 58px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    color: #171717;
+
+    margin-bottom: 15px;
+}
+
+
+/* -----------------------------------------------------
+   SUBTÍTULO
+   ----------------------------------------------------- */
+
+.columna-overlay .subtitulo {
+
+    max-width: 700px;
+
+    margin: 0 auto 15px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 20px;
+
+    line-height: 1.25;
+
+    color: #292929;
+}
+
+
+/* -----------------------------------------------------
+   AUTOR Y FECHA
+   ----------------------------------------------------- */
+
+.datos-columna {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 12px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #8f1b22;
+}
+
+
+.datos-columna span + span::before {
+
+    content: "•";
+
+    margin-right: 15px;
+
+    color: #a51d24;
+}
+
+
+/* -----------------------------------------------------
+   LEER COLUMNA
+   ----------------------------------------------------- */
+
+.leer-columna {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #171717;
+
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #a51d24;
+
+    padding-bottom: 4px;
+}
+
+
+/* -----------------------------------------------------
+   COLUMNAS ANTERIORES
+   ----------------------------------------------------- */
+
+.columnas-anteriores {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #cfcac2;
+}
+
+
+/* -----------------------------------------------------
+   TARJETAS PEQUEÑAS
+   ----------------------------------------------------- */
+
+.columna-card-pequena {
+
+    display: block;
+
+    border-top: 1px solid #171717;
+
+    padding-top: 15px;
+}
+
+
+/* -----------------------------------------------------
+   PLACEHOLDER
+   ----------------------------------------------------- */
+
+.card-placeholder {
+
+    width: 100%;
+
+    aspect-ratio: 1.55 / 1;
+
+    background: #ebe7df;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #99948c;
+}
+
+
+/* -----------------------------------------------------
+   TEXTO DE LAS TARJETAS
+   ----------------------------------------------------- */
+
+.card-contenido {
+
+    padding-top: 18px;
+}
+
+
+.card-contenido h3 {
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    color: #171717;
+}
+
+
+/* -----------------------------------------------------
+   RESPONSIVE
+   ----------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+    .contenido {
+        padding: 25px 18px 60px;
+    }
+
+
+    .encabezado-seccion {
+        margin-bottom: 25px;
+    }
+
+
+    .columna-imagen {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    .columna-overlay {
+
+        width: 88%;
+
+        bottom: 5%;
+
+        padding: 22px 20px;
+    }
+
+
+    .columna-overlay h2 {
+
+        font-size: 36px;
+    }
+
+
+    .columna-overlay .subtitulo {
+
+        font-size: 17px;
+    }
+
+
+    .datos-columna {
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+
+    .datos-columna span + span::before {
+
+        display: none;
+    }
+
+
+    .columnas-anteriores {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+/* -----------------------------------------------------
+   MÓVILES PEQUEÑOS
+   ----------------------------------------------------- */
+
+@media (max-width: 500px) {
+
+    .contenido {
+        padding: 20px 14px 50px;
+    }
+
+
+    .marca-seccion {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .encabezado-seccion h1 {
+        font-size: 48px;
+    }
+
+
+    .columna-imagen {
+        aspect-ratio: 1 / 1;
+    }
+
+
+    .columna-overlay {
+
+        width: 90%;
+
+        padding: 18px 15px;
+    }
+
+
+    .columna-overlay h2 {
+
+        font-size: 30px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .columna-overlay .subtitulo {
+
+        font-size: 15px;
+
+        line-height: 1.15;
+    }
+
+
+    .leer-columna {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+        margin-top: 12px;
+    }
+
+
+    .card-contenido h3 {
+
+        font-size: 30px;
+    }
+
+}
+
+/* =====================================================
+   ENCABEZADO PRINCIPAL DE CUADERNOS
+   ===================================================== */
+
+
+/* -----------------------------------------------------
+   MARCO
+   ----------------------------------------------------- */
+
+.marco-columnas {
+
+    position: relative;
+
+    width: min(1100px, 100%);
+
+    min-height: 470px;
+
+    margin: 0 auto 70px;
+
+    padding: 45px;
+
+    border: 2px solid #a51d24;
+
+    background: #f8f6f2;
+
+    overflow: hidden;
+}
+
+
+/* -----------------------------------------------------
+   ESQUINAS DECORATIVAS
+   ----------------------------------------------------- */
+
+.marco-columnas .esquina {
+
+    position: absolute;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-color: #a51d24;
+
+    border-style: solid;
+
+    z-index: 5;
+}
+
+
+.marco-columnas .esquina-superior-izquierda {
+
+    top: 10px;
+    left: 10px;
+
+    border-width: 2px 0 0 2px;
+}
+
+
+.marco-columnas .esquina-superior-derecha {
+
+    top: 10px;
+    right: 10px;
+
+    border-width: 2px 2px 0 0;
+}
+
+
+.marco-columnas .esquina-inferior-izquierda {
+
+    bottom: 10px;
+    left: 10px;
+
+    border-width: 0 0 2px 2px;
+}
+
+
+.marco-columnas .esquina-inferior-derecha {
+
+    bottom: 10px;
+    right: 10px;
+
+    border-width: 0 2px 2px 0;
+}
+
+
+/* -----------------------------------------------------
+   DISTRIBUCIÓN
+   ----------------------------------------------------- */
+
+.hero-grid-columnas {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    align-items: center;
+
+    min-height: 375px;
+
+    gap: 20px;
+}
+
+
+/* -----------------------------------------------------
+   ILUSTRACIÓN
+   ----------------------------------------------------- */
+
+.hero-logo-columnas {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 100%;
+}
+
+
+.hero-logo-columnas a {
+
+    display: block;
+
+    text-decoration: none;
+
+}
+
+
+.hero-logo-columnas img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 430px;
+
+    height: auto;
+
+    transition:
+        transform 0.45s ease;
+}
+
+
+/* -----------------------------------------------------
+   ANIMACIÓN DE LA MANO
+   ----------------------------------------------------- */
+
+.hero-logo-columnas a:hover img {
+
+    transform: translateY(-18px);
+
+}
+
+
+/* -----------------------------------------------------
+   TÍTULO
+   ----------------------------------------------------- */
+
+.hero-title-columnas {
+
+    text-align: center;
+
+}
+
+
+.hero-title-columnas h1 {
+
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    color: #171717;
+}
+
+
+.hero-title-columnas .linea1 {
+
+    display: block;
+
+    font-size: clamp(55px, 6vw, 85px);
+
+    letter-spacing: 1px;
+}
+
+
+.hero-title-columnas .linea2 {
+
+    display: block;
+
+    margin: 12px 0;
+
+    font-size: clamp(28px, 3vw, 42px);
+
+    font-style: italic;
+
+    line-height: 1;
+}
+
+
+.hero-title-columnas .linea3 {
+
+    display: block;
+
+    font-size: clamp(55px, 6vw, 85px);
+
+    letter-spacing: 1px;
+}
+
+
+/* -----------------------------------------------------
+   LÍNEA ROJA
+   ----------------------------------------------------- */
+
+.hero-divider-columnas {
+
+    width: 72%;
+
+    height: 2px;
+
+    margin: 35px auto 25px;
+
+    background: #a51d24;
+}
+
+
+/* -----------------------------------------------------
+   FRASE
+   ----------------------------------------------------- */
+
+.hero-title-columnas p {
+
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #171717;
+
+    white-space: nowrap;
+}
+
+
+.hero-title-columnas p span {
+
+    margin: 0 12px;
+
+    color: #a51d24;
+}
+
+
+/* -----------------------------------------------------
+   RESPONSIVE
+   ----------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+    .marco-columnas {
+
+        min-height: auto;
+
+        padding: 30px 25px;
+
+        margin-bottom: 45px;
+    }
+
+
+    .hero-grid-columnas {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 20px 0;
+    }
+
+
+    .hero-logo-columnas img {
+
+        max-width: 300px;
+    }
+
+
+    .hero-title-columnas .linea1,
+    .hero-title-columnas .linea3 {
+
+        font-size: 55px;
+    }
+
+
+    .hero-title-columnas .linea2 {
+
+        font-size: 30px;
+
+        margin: 8px 0;
+    }
+
+
+    .hero-divider-columnas {
+
+        margin: 25px auto 18px;
+    }
+
+
+    .hero-title-columnas p {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+        white-space: normal;
+
+        line-height: 2;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .marco-columnas {
+
+        border-width: 1px;
+
+        padding: 25px 15px;
+    }
+
+
+    .hero-logo-columnas img {
+
+        max-width: 250px;
+    }
+
+
+    .hero-title-columnas .linea1,
+    .hero-title-columnas .linea3 {
+
+        font-size: 43px;
+    }
+
+
+    .hero-title-columnas .linea2 {
+
+        font-size: 25px;
+    }
+
+
+    .hero-title-columnas p span {
+
+        margin: 0 5px;
+    }
+
+}

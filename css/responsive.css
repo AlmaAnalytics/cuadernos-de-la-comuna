@@ -1,0 +1,155 @@
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 25px 20px;
+    }
+
+    .marco {
+        padding: 40px 30px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-logo img {
+        max-width: 400px;
+    }
+
+    .hero-title {
+        padding-bottom: 20px;
+    }
+
+    .hero-title p {
+        white-space: normal;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 15px;
+    }
+
+    .marco {
+        padding: 35px 20px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .hero-logo img {
+        max-width: 280px;
+    }
+
+    .linea1 {
+        font-size: 3.5rem;
+    }
+
+    .linea2 {
+        font-size: 2rem;
+    }
+
+    .linea3 {
+        font-size: 3.5rem;
+    }
+
+    .hero-divider {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .hero-title p {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+        line-height: 2;
+    }
+
+    .esquina {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    /* Columnas */
+
+    .contenido {
+        padding: 20px 15px 70px;
+    }
+
+    .columnas {
+        width: 100%;
+    }
+
+    .encabezado-seccion {
+        padding-top: 35px;
+    }
+
+    .encabezado-seccion h2 {
+        font-size: 3rem;
+    }
+
+    .columna-card {
+        padding: 30px 10px;
+    }
+
+    .columna-card h3 {
+        font-size: 3rem;
+    }
+
+    .columna-card .subtitulo {
+        font-size: 1.05rem;
+    }
+
+
+    /* Artículo */
+
+    .articulo {
+        width: 100%;
+        padding: 35px 20px 70px;
+    }
+
+    .volver {
+        margin-bottom: 50px;
+    }
+
+    .articulo-header h1 {
+        font-size: 3.5rem;
+    }
+
+    .articulo-bajada {
+        font-size: 1.2rem;
+    }
+
+    .articulo-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .texto-articulo {
+        margin: 50px auto;
+    }
+
+    .texto-articulo p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .texto-articulo h2 {
+        font-size: 2.5rem;
+    }
+
+}

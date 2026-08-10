@@ -1,0 +1,1736 @@
+/* =========================================================
+   CUADERNOS DE LA COMUNA
+   STYLE.CSS
+   ========================================================= */
+
+
+/* =========================================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f6f2;
+    color: #1a1a1a;
+    font-family: Georgia, serif;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   2. PORTADA PRINCIPAL
+   ========================================================= */
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 40px;
+}
+
+
+/* ---------------------------------------------------------
+   MARCO
+   --------------------------------------------------------- */
+
+.marco {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+
+    border-top: 3px solid #a51c1c;
+    border-bottom: 3px solid #a51c1c;
+
+    padding: 45px 70px;
+}
+
+
+/* ---------------------------------------------------------
+   ESQUINAS DECORATIVAS
+   --------------------------------------------------------- */
+
+.esquina {
+    position: absolute;
+
+    width: 75px;
+    height: 75px;
+
+    border-color: #a51c1c;
+}
+
+
+/* Superior izquierda */
+
+.esquina-superior-izquierda {
+    top: 0;
+    left: 0;
+
+    border-top: 3px solid #a51c1c;
+    border-left: 3px solid #a51c1c;
+}
+
+.esquina-superior-izquierda::after {
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    border-top: 2px solid #a51c1c;
+    border-left: 2px solid #a51c1c;
+}
+
+.esquina-superior-izquierda::before {
+    content: "";
+
+    position: absolute;
+
+    top: 26px;
+    left: 26px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #a51c1c;
+
+    border-radius: 50%;
+}
+
+
+/* Superior derecha */
+
+.esquina-superior-derecha {
+    top: 0;
+    right: 0;
+
+    border-top: 3px solid #a51c1c;
+    border-right: 3px solid #a51c1c;
+}
+
+.esquina-superior-derecha::after {
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    border-top: 2px solid #a51c1c;
+    border-right: 2px solid #a51c1c;
+}
+
+.esquina-superior-derecha::before {
+    content: "";
+
+    position: absolute;
+
+    top: 26px;
+    right: 26px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #a51c1c;
+
+    border-radius: 50%;
+}
+
+
+/* Inferior izquierda */
+
+.esquina-inferior-izquierda {
+    bottom: 0;
+    left: 0;
+
+    border-bottom: 3px solid #a51c1c;
+    border-left: 3px solid #a51c1c;
+}
+
+.esquina-inferior-izquierda::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 12px;
+    left: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    border-bottom: 2px solid #a51c1c;
+    border-left: 2px solid #a51c1c;
+}
+
+
+/* Inferior derecha */
+
+.esquina-inferior-derecha {
+    bottom: 0;
+    right: 0;
+
+    border-bottom: 3px solid #a51c1c;
+    border-right: 3px solid #a51c1c;
+}
+
+.esquina-inferior-derecha::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    border-bottom: 2px solid #a51c1c;
+    border-right: 2px solid #a51c1c;
+}
+
+
+/* =========================================================
+   3. CABECERA DE LA PORTADA
+   ========================================================= */
+
+.hero-grid {
+    width: 100%;
+    max-width: 1400px;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+/* ---------------------------------------------------------
+   ILUSTRACIÓN
+   --------------------------------------------------------- */
+
+.hero-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo img {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Movimiento al pasar el mouse */
+
+.hero-logo img:hover {
+    transform: translateY(-8px);
+}
+
+
+/* ---------------------------------------------------------
+   TÍTULO
+   --------------------------------------------------------- */
+
+.hero-title {
+    text-align: center;
+}
+
+.hero-title h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    line-height: 0.9;
+}
+
+
+/* CUADERNOS */
+
+.linea1 {
+    display: block;
+
+    font-size: clamp(4rem, 7vw, 8rem);
+
+    letter-spacing: 2px;
+}
+
+
+/* DE LA */
+
+.linea2 {
+    display: block;
+
+    font-size: clamp(2rem, 3vw, 3.5rem);
+
+    font-style: italic;
+
+    margin: 15px 0;
+}
+
+
+/* COMUNA */
+
+.linea3 {
+    display: block;
+
+    font-size: clamp(4rem, 6vw, 7rem);
+
+    letter-spacing: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   DIVISOR
+   --------------------------------------------------------- */
+
+.hero-divider {
+    width: 80%;
+
+    margin: 35px auto;
+
+    border-top: 2px solid #a51c1c;
+}
+
+
+/* ---------------------------------------------------------
+   FRASE
+   --------------------------------------------------------- */
+
+.hero-title p {
+    font-size: 0.85rem;
+
+    letter-spacing: 3px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.hero-title p span {
+    color: #a51c1c;
+
+    margin: 0 8px;
+}
+
+
+/* =========================================================
+   4. CONTENIDO
+   ========================================================= */
+
+.contenido {
+    width: 100%;
+
+    padding: 30px 40px 100px;
+}
+
+.columnas {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   5. ENCABEZADO "ÚLTIMAS COLUMNAS"
+   ========================================================= */
+
+.encabezado-seccion {
+    border-top: 1px solid #d5d0c8;
+
+    padding-top: 50px;
+
+    margin-bottom: 55px;
+}
+
+.encabezado-seccion p {
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 4px;
+
+    color: #a51c1c;
+
+    margin-bottom: 10px;
+}
+
+.encabezado-seccion h1,
+.encabezado-seccion h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   6. TARJETA PRINCIPAL
+   ========================================================= */
+
+.columna-card {
+    display: block;
+
+    width: 100%;
+
+    color: #111;
+
+    text-decoration: none;
+
+    margin-bottom: 80px;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGEN
+   --------------------------------------------------------- */
+
+.columna-imagen {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.columna-imagen > img {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0;
+
+    transition: transform 0.6s ease;
+}
+
+
+/* ---------------------------------------------------------
+   RECUADRO TRANSPARENTE
+   --------------------------------------------------------- */
+
+.columna-overlay {
+    position: absolute;
+
+    left: 50%;
+    bottom: 8%;
+
+    transform: translateX(-50%);
+
+    width: 68%;
+
+    padding: 28px 35px;
+
+    background: rgba(248, 246, 242, 0.66);
+
+    backdrop-filter: blur(2px);
+
+    -webkit-backdrop-filter: blur(2px);
+
+    text-align: center;
+
+    transition:
+        background 0.3s ease,
+        transform 0.4s ease;
+}
+
+
+/* ---------------------------------------------------------
+   TÍTULO PRINCIPAL
+   --------------------------------------------------------- */
+
+/*
+   IMPORTANTE:
+   Este era el problema.
+
+   La tarjeta tenía color #111 heredado de
+   .columna-card. Ahora el título queda
+   explícitamente en rojo.
+*/
+
+.columna-overlay h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: #a71919;
+}
+
+
+/* ---------------------------------------------------------
+   SUBTÍTULO
+   --------------------------------------------------------- */
+
+.columna-overlay p {
+    margin: 14px auto 0;
+
+    max-width: 700px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.1rem;
+
+    line-height: 1.35;
+
+    font-style: italic;
+
+    color: #1a1a1a;
+}
+
+
+/* ---------------------------------------------------------
+   AUTOR Y FECHA
+   --------------------------------------------------------- */
+
+.overlay-info {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 14px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #7d1515;
+}
+
+
+/* ---------------------------------------------------------
+   LEER COLUMNA
+   --------------------------------------------------------- */
+
+.leer-columna {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #a71919;
+}
+
+
+/* =========================================================
+   7. EFECTOS DE LA TARJETA PRINCIPAL
+   ========================================================= */
+
+.columna-card:hover {
+    transform: translateX(10px);
+}
+
+.columna-card:hover .columna-imagen > img {
+    transform: scale(1.015);
+}
+
+.columna-card:hover .columna-overlay {
+    background: rgba(248, 246, 242, 0.70);
+}
+
+
+/* =========================================================
+   8. PUBLICACIONES ANTERIORES
+   ========================================================= */
+
+.columnas-anteriores {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+
+    border-top: 1px solid #cfc9c1;
+
+    padding-top: 35px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   9. TARJETA PEQUEÑA
+   ========================================================= */
+
+.columna-card-pequena {
+    position: relative;
+
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    overflow: hidden;
+
+    transition: transform 0.35s ease;
+}
+
+.columna-card-pequena:hover {
+    transform: translateX(8px);
+}
+
+
+/* ---------------------------------------------------------
+   IMAGEN
+   --------------------------------------------------------- */
+
+.card-imagen {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    border-top: 1px solid #1a1a1a;
+}
+
+.card-imagen img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* ---------------------------------------------------------
+   RECUADRO TRANSPARENTE
+   --------------------------------------------------------- */
+
+.card-overlay {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    padding: 22px 25px;
+
+    background: rgba(248, 246, 242, 0.66);
+
+    backdrop-filter: blur(2px);
+
+    -webkit-backdrop-filter: blur(2px);
+
+    text-align: center;
+
+    transition: background 0.3s ease;
+}
+
+
+/* ---------------------------------------------------------
+   TÍTULO
+   --------------------------------------------------------- */
+
+.card-overlay h3 {
+    margin: 0 0 8px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 2rem;
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    color: #a71919;
+}
+
+
+/* ---------------------------------------------------------
+   SUBTÍTULO
+   --------------------------------------------------------- */
+
+.card-overlay p {
+    margin: 0 auto 10px;
+
+    max-width: 600px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1rem;
+
+    line-height: 1.25;
+
+    font-style: italic;
+
+    color: #1a1a1a;
+}
+
+
+/* ---------------------------------------------------------
+   AUTOR Y FECHA
+   --------------------------------------------------------- */
+
+.card-info {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+
+    margin-top: 8px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.10em;
+
+    text-transform: uppercase;
+
+    color: #7d1515;
+}
+
+
+/* ---------------------------------------------------------
+   LEER
+   --------------------------------------------------------- */
+
+.card-leer {
+    display: inline-block;
+
+    margin-top: 9px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+
+    color: #111;
+
+    border-bottom: 1px solid #a71919;
+
+    padding-bottom: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   EFECTO
+   --------------------------------------------------------- */
+
+.columna-card-pequena:hover .card-imagen img {
+    transform: scale(1.03);
+}
+
+.columna-card-pequena:hover .card-overlay {
+    background: rgba(248, 246, 242, 0.70);
+}
+
+
+/* =========================================================
+   10. ESPACIO PARA FUTURA PUBLICACIÓN
+   ========================================================= */
+
+.card-vacio {
+    min-height: 250px;
+
+    border-top: 1px solid #1a1a1a;
+
+    background: #ebe8e1;
+}
+
+
+/* =========================================================
+   11. ESTILOS GENERALES DE ARTÍCULOS
+   ========================================================= */
+
+/*
+   articulo.css contiene los estilos específicos
+   de las publicaciones.
+   Aquí solo dejamos compatibilidad básica.
+*/
+
+.articulo {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 60px 20px 100px;
+}
+
+
+/* ---------------------------------------------------------
+   ENLACES DE ARTÍCULOS
+   --------------------------------------------------------- */
+
+.volver {
+    display: inline-block;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #a51c1c;
+
+    text-decoration: none;
+}
+
+.volver:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   PIE
+   --------------------------------------------------------- */
+
+.articulo-footer {
+    border-top: 1px solid #d5d0c8;
+
+    padding: 35px 30px 80px;
+
+    margin-top: 80px;
+
+    text-align: center;
+}
+
+.articulo-footer a {
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #a51c1c;
+
+    text-decoration: none;
+}
+
+.articulo-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   12. SELECCIÓN DE TEXTO
+   ========================================================= */
+
+::selection {
+    background: #6fa96f;
+    color: #111;
+}
+
+
+/* =========================================================
+   13. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        padding: 25px;
+    }
+
+    .marco {
+        padding: 40px 45px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .hero-logo img {
+        max-width: 380px;
+    }
+
+    .hero-title p {
+        white-space: normal;
+    }
+
+    .columnas {
+        width: 92%;
+    }
+
+    .contenido {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+/* =========================================================
+   TABLET / MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding: 15px;
+    }
+
+    .marco {
+        padding: 35px 25px;
+    }
+
+    .esquina {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-logo img {
+        max-width: 300px;
+    }
+
+    .linea1 {
+        font-size: 4rem;
+    }
+
+    .linea2 {
+        font-size: 2rem;
+    }
+
+    .linea3 {
+        font-size: 3.8rem;
+    }
+
+    .hero-divider {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .hero-title p {
+        font-size: 0.65rem;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* ---------------------------------------------
+       CONTENIDO
+       --------------------------------------------- */
+
+    .contenido {
+        padding: 20px 15px 70px;
+    }
+
+    .columnas {
+        width: 100%;
+    }
+
+    .encabezado-seccion {
+        padding-top: 35px;
+
+        margin-bottom: 35px;
+    }
+
+    .encabezado-seccion h1,
+    .encabezado-seccion h2 {
+        font-size: 3.5rem;
+    }
+
+
+    /* ---------------------------------------------
+       TARJETA PRINCIPAL
+       --------------------------------------------- */
+
+    .columna-card {
+        margin-bottom: 55px;
+    }
+
+    .columna-overlay {
+        width: 85%;
+
+        bottom: 5%;
+
+        padding: 18px 20px;
+    }
+
+    .columna-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .columna-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .overlay-info {
+        flex-direction: column;
+
+        gap: 5px;
+
+        font-size: 0.6rem;
+    }
+
+
+    /* ---------------------------------------------
+       TARJETAS ANTERIORES
+       --------------------------------------------- */
+
+    .columnas-anteriores {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .card-overlay {
+        left: 5%;
+        right: 5%;
+
+        padding: 18px 15px;
+    }
+
+    .card-overlay h3 {
+        font-size: 1.7rem;
+    }
+
+    .card-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .card-info {
+        font-size: 0.55rem;
+    }
+
+    .card-vacio {
+        min-height: 200px;
+    }
+
+
+    /* ---------------------------------------------
+       ARTÍCULO
+       --------------------------------------------- */
+
+    .articulo {
+        width: 92%;
+
+        padding: 40px 10px 70px;
+    }
+}
+
+/* =========================================================
+   MENÚ PRINCIPAL DE LA PORTADA
+   ========================================================= */
+
+.menu-principal {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    width: 100%;
+
+    margin-top: 28px;
+
+}
+
+
+/* ---------------------------------------------------------
+   BOTONES
+   --------------------------------------------------------- */
+
+.menu-principal a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 105px;
+
+    height: 34px;
+
+    padding: 0 18px;
+
+    border: 1px solid #a71919;
+
+    background: transparent;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.62rem;
+
+    font-weight: 500;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    color: #1a1a1a;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+   --------------------------------------------------------- */
+
+.menu-principal a:hover {
+
+    background-color: #a71919;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   MENÚ PRINCIPAL DE LA PORTADA
+   ========================================================= */
+
+.menu-principal {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    width: 100%;
+
+    margin-top: 28px;
+
+}
+
+
+/* ---------------------------------------------------------
+   BOTONES
+   --------------------------------------------------------- */
+
+.menu-principal a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 105px;
+
+    height: 34px;
+
+    padding: 0 18px;
+
+    border: 1px solid #a71919;
+
+    background: transparent;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.62rem;
+
+    font-weight: 500;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    color: #1a1a1a;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+/* ---------------------------------------------------------
+   AL PASAR EL MOUSE
+   --------------------------------------------------------- */
+
+.menu-principal a:hover {
+
+    background-color: #a71919;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .menu-principal {
+
+        gap: 8px;
+
+        margin-top: 24px;
+
+    }
+
+
+    .menu-principal a {
+
+        min-width: auto;
+
+        height: 31px;
+
+        padding: 0 12px;
+
+        font-size: 0.55rem;
+
+        letter-spacing: 1.8px;
+
+    }
+
+}
+
+/* =========================================================
+   PÁGINA COLABORA
+   ========================================================= */
+
+.pagina-header {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 35px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #c8c4bc;
+
+}
+
+
+.pagina-marca {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+    text-decoration: none;
+
+    color: #a71919;
+
+}
+
+
+.pagina-nav {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+.pagina-nav a {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    color: #222;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.pagina-nav a:hover,
+.pagina-nav .activo {
+
+    color: #a71919;
+
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.contenido-colabora {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 70px 30px 100px;
+
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.encabezado-colabora {
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+}
+
+
+.encabezado-colabora .separador {
+
+    display: block;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #c8c4bc;
+
+    margin-bottom: 35px;
+
+}
+
+
+.etiqueta-colabora {
+
+    margin-bottom: 20px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #a71919;
+
+}
+
+
+.encabezado-colabora h1 {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(4rem, 8vw, 7rem);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    color: #a71919;
+
+}
+
+
+.bajada-colabora {
+
+    max-width: 650px;
+
+    margin: 30px auto 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.5rem;
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+    color: #333;
+
+}
+
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
+
+.texto-colabora {
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+}
+
+
+.texto-colabora > p {
+
+    margin-bottom: 30px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.35rem;
+
+    line-height: 1.75;
+
+    text-align: justify;
+
+    color: #171717;
+
+}
+
+
+/* =========================================================
+   FORMAS DE COLABORAR
+   ========================================================= */
+
+.formas-colaboracion {
+
+    margin: 70px 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 50px 60px;
+
+}
+
+
+.forma-colaboracion {
+
+    padding-top: 18px;
+
+    border-top: 1px solid #a71919;
+
+}
+
+
+.forma-colaboracion h2 {
+
+    margin-bottom: 10px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 2.1rem;
+
+    font-weight: 500;
+
+    color: #a71919;
+
+}
+
+
+.forma-colaboracion p {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.1rem;
+
+    line-height: 1.6;
+
+    color: #333;
+
+}
+
+
+/* =========================================================
+   CIERRE
+   ========================================================= */
+
+.cierre-colabora {
+
+    margin-top: 70px !important;
+
+    padding-top: 40px;
+
+    border-top: 1px solid #c8c4bc;
+
+}
+
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+
+.contacto-colabora {
+
+    max-width: 500px;
+
+    margin: 80px auto 0;
+
+    padding-top: 35px;
+
+    border-top: 1px solid #a71919;
+
+    text-align: center;
+
+}
+
+
+.contacto-titulo {
+
+    margin-bottom: 20px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 2rem;
+
+    font-style: italic;
+
+    color: #a71919;
+
+}
+
+
+.contacto-nombre {
+
+    margin-bottom: 5px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.5rem;
+
+}
+
+
+.contacto-correo {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.contacto-correo:hover {
+
+    color: #a71919;
+
+}
+
+
+/* =========================================================
+   PIE
+   ========================================================= */
+
+.pagina-footer {
+
+    padding: 40px 20px 70px;
+
+    text-align: center;
+
+    border-top: 1px solid #c8c4bc;
+
+}
+
+
+.pagina-footer a {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    color: #a71919;
+
+}
+
+
+.pagina-footer a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .pagina-header {
+
+        width: 92%;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+
+    }
+
+
+    .pagina-nav {
+
+        gap: 16px;
+
+    }
+
+
+    .contenido-colabora {
+
+        padding: 50px 22px 70px;
+
+    }
+
+
+    .encabezado-colabora {
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .encabezado-colabora h1 {
+
+        font-size: clamp(3.5rem, 16vw, 5rem);
+
+    }
+
+
+    .bajada-colabora {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    .texto-colabora > p {
+
+        font-size: 1.2rem;
+
+        line-height: 1.7;
+
+        text-align: left;
+
+    }
+
+
+    .formas-colaboracion {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        margin: 55px 0;
+
+    }
+
+
+    .forma-colaboracion h2 {
+
+        font-size: 1.9rem;
+
+    }
+
+}
