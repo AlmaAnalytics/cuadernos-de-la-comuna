@@ -578,3 +578,14 @@
     color: #9b1c1c;
 
 }
+
+.capitular {
+    float: left;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 7.5rem;
+    line-height: 0.72;
+    font-weight: 600;
+    color: #a51616;
+    margin: 0.08em 0.10em 0 0;
+    text-transform: uppercase;
+}
